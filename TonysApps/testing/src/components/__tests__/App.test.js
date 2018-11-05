@@ -7,6 +7,7 @@ import CommentList from '../CommentList';
 let wrapped;
 
 //before every single test, it will run this function reassigning the 'wrapped' var
+
 beforeEach(() => {
   wrapped = shallow(<App />)
 });
