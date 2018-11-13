@@ -6,7 +6,6 @@ import reducers from './reducers'
 export default (props) => {
   return (
     <Provider store={createStore(reducers, {})}>
-    //test
       {props.children}
     </Provider>
   )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme'
 import CommentBox from '../CommentBox.js'
-import Root from ;
+import Root from '../../Root.js';
 let wrapped;
 
 beforeEach(() => {
