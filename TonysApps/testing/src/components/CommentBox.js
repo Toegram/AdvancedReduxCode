@@ -16,15 +16,13 @@ class CommentBox extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    //TODO
-    //call an action creater to save the comment
-    this.setState({ comment: '' })
-  }
+    this.setState({ comment: '' });
+  };
 
   render() {
     return (
       <div>
-        <form onSubmit={() => this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
           <h4>
             Add a Comment! </h4>
           <textarea

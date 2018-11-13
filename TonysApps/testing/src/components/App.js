@@ -5,8 +5,8 @@ import CommentList from './CommentList'
 export default () => {
   return (
     <div>
-      <CommentList />
       <CommentBox />
+      <CommentList />
     </div>
   )
 }
