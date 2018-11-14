@@ -1,11 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Root from './Root.js';
-import App from './components/App.js';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
+import Root from "./Root.js";
+import App from "./components/App.js";
 
 ReactDOM.render(
   <Root>
-    <App />
+    <BrowserRouter>
+      <Route path="/" component={App} />
+    </BrowserRouter>
   </Root>,
-  document.querySelector('#root')
+  document.querySelector("#root")
 );
