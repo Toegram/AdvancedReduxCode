@@ -5,6 +5,23 @@ import * as actions from "../actions";
 class CommentBox extends Component {
   state = { comment: "" };
 
+  //our component gets rendered
+  componentDidMount() {
+    this.shouldNavAway();
+  }
+
+  //our component recieved new props and updates
+  componentDidUpdate() {
+    this.shouldNavAway();
+  }
+
+  shouldNavAway() {
+    if (!this.props.auth) {
+      //props.history comes from React Router
+      this.props.history.push("/");
+    }
+  }
+
   handleChange = e => {
     this.setState({ comment: e.target.value });
   };
@@ -34,7 +51,11 @@ class CommentBox extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return { auth: state.auth };
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(CommentBox);
