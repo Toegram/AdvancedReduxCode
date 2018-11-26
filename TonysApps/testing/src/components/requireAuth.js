@@ -15,12 +15,12 @@ export default ChildComponent => {
 
     shouldNavAway() {
       if (!this.props.auth) {
-        //props.history comes from React Router
+        //props.history comes from React Router. In App.js we render CommentBox from <Route component={CommentBox} /> and therefore get access to some extra props
         this.props.history.push("/");
       }
     }
     render() {
-      return <ChildComponent />;
+      return <ChildComponent {...this.props} />;
     }
   }
 

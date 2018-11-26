@@ -33,7 +33,6 @@ class App extends Component {
   }
 
   render() {
-    console.log("props is", this.props);
     return (
       <div>
         {this.renderHeader()}
